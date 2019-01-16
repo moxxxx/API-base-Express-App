@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food2Fork API</title>
+    <script src="jquery-1.11.3.js"></script>
+    <style>
+
+        h1 {
+            font-family: "Lucida Grande";
+            font-size: 30px;
+            text-align: center;
+            color: rgba(191, 40, 153, 0.6);
+        }
+        .searcher{
+            margin: 0 auto 0 auto;
+            left: 15px;
+            right: 15px;
+            width: 275px;
+            text-align: center;
+            padding: 0;
+        }
+        #food {
+            color: white;
+            width: 195px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            float: left;
+            text-align: center;
+            border: 0;
+            border-radius: 5px 0 0 5px;
+            background: rgba(95,129,183,0.3);
+        }
+        #searchButton {
+            color: white;
+            width: 80px;
+            height: 30px;
+            margin: 0;
+            padding: 0;
+            float: left;
+            border: 0;
+            border-radius: 0 5px 5px 0;
+            background: rgba(85,108,145,0.5);
+        }
+        ::placeholder {
+            color: white;
+            opacity: 0.5;
+        }
+        #foodDiv {
+            width: 210px;
+            height: 260px;
+            border: 1px;
+            border-radius: 5px;
+            text-align: center;
+            background: rgba(255,255,255,0.3);
+            display: inline-table;
+            margin: 5px;
+        }
+        #foodImg {
+            border-radius: 5px;
+            margin-top: 5px;
+        }
+        #foodTitle {
+            font-family: "Lucida Grande";
+            font-size: 15px;
+            width: 180px;
+            height: 50px;
+            color: rgba(127, 13, 193, 0.8);
+            text-decoration: none;
+        }
+        #content-area {
+            display: inline-block;
+            text-align: center;
+            margin: 0;
+            padding: 5px;
+        }
+
+        #shimmer {
+            background: linear-gradient(270deg, #ffdea9, #647a93);
+            background-size: 400% 400%;
+
+            -webkit-animation: shimmer 10s ease infinite;
+            -moz-animation: shimmer 10s ease infinite;
+            animation: shimmer 10s ease infinite;
+        }
+
+        @-webkit-keyframes shimmer {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @-moz-keyframes shimmer {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+        @keyframes shimmer {
+            0%{background-position:0% 50%}
+            50%{background-position:100% 50%}
+            100%{background-position:0% 50%}
+        }
+
+        /*
+        shimmering effect:
+        https://codepen.io/LaunaKay/pen/xVGxrW
+        */
+    </style>
+</head>
+<body id="shimmer">
+<h1 id="mainTitle">Search On Food2Fork!</h1>
+<div class="searcher">
+    <input type="text" id="food" placeholder="Input Recipes...">
+    <button id="searchButton" onclick="handleSearch()">Search</button>
+</div>
+
+<div id="content-area"></div>
+
+
+<script src='client.js'></script>
+</body>
+</html>
